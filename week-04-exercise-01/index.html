@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 04 Exercise 01 - My Dev Tools Vandalism</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <main>
+        <h1>My Dev Tools Vandalism</h1>
+        <p>
+            I used browser developer tools to temporarily "vandalize" a
+            website. Below is a screenshot showing my changes. These edits
+            only appeared on my computer and did not affect the actual
+            website.
+        </p>
+        <div class="screenshot-container">
+            <img src="./google-vandalism.png" alt="Google homepage edited with GIGGLE text and gradient background" />
+        </div>
+        <h2>What I “Vandalized”</h2>
+
+    <p><strong>Site:</strong> Google.com</p>
+
+    <p><strong>HTML edits (content):</strong> I hid the Google logo and injected a large headline that says “GIGGLE.” I also renamed the buttons from “Google Search” and “I'm Feeling Lucky” to “Search My Vibes” and “I'm Feeling Silly.” These content edits were done in DevTools (and reinforced via the Console when the site re-rendered).</p>
+
+    <p><strong>CSS edits (styles):</strong> I added a pink-yellow gradient background and styled the headline in Comic Sans with a lime-green color and black text shadow. I enlarged and rounded the search input and added a subtle glow so it stood out against the background. To keep the gradient and headline visible despite Google's dynamic re-rendering, I injected a global stylesheet and used a MutationObserver to reapply the banner and transparency rules as needed.</p>
+
+    <h3>Reflection</h3>
+    <p>Editing Google with DevTools showed how quickly structure (HTML) and presentation (CSS) combine to create a page's look. Because Google dynamically updates parts of the DOM, I learned that temporary edits may be overwritten unless applied via persistent stylesheet rules or re-injected when the DOM changes. This exercise helped me understand how DevTools can be used both for playful experiments and for debugging real pages.</p>
+
+    <ul>
+      <li>What text did you edit? — The logo area (replaced with “GIGGLE”) and the button labels.</li>
+      <li>What CSS properties did you modify? — Background, font-family, font-size, color, text-shadow, border-radius, box-shadow for the input.</li>
+      <li>What made your edits interesting or amusing? — Turning the professional Google homepage into a playful, colorful version with whimsical button labels.</li>
+      <li>Did some changes not work? Why? — The background and banner were occasionally overwritten by Google's scripts. I used a persistent stylesheet and a MutationObserver to keep my edits applied.</li>
+      <li>Why did you choose the changes you did? — To clearly demonstrate both content (HTML) and presentation (CSS) edits while keeping the page still usable for screenshots.</li>
+      <li>How do HTML and CSS interact to make visual changes? — HTML provides the structure and elements to target; CSS controls the visual presentation. Changing either can dramatically alter the user experience.</li>
+      <li>How can DevTools help you debug your own pages? — DevTools lets you experiment in real time, test CSS changes, inspect element structure, and prototype fixes before applying them to source files.</li>
+    </ul>
+
+    <p><a href="../">← Back to Course Homepage</a></p>
+  </main>
+</body>
+
+</html>
