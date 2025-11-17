@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Andres Solis — Personal Landing Page</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="header">
+      <div class="container header__row">
+        <a class="brand" href="#">
+          <span class="brand__mark">AS</span>
+          <span class="brand__name">Andres Solis</span>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <ul class="nav__list">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a class="btn btn--ghost" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="container hero">
+        <div class="hero__text">
+          <h1>Designing clear, reliable web UI</h1>
+          <p>
+            I'm Andres in DFW. I build accessible, responsive pages with semantic HTML
+            and focused CSS — the same approach behind my FlightPal concept and this site.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#projects">See projects</a>
+            <a class="btn" href="#about">About me</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section id="about" class="section">
+        <div class="container grid-2">
+          <div>
+            <h2>About</h2>
+            <p>
+              Clean HTML. Careful CSS. Layouts that work everywhere.
+            </p>
+            <p>
+              Build small, improve often.
+            </p>
+          </div>
+          <aside class="card">
+            <ul class="list">
+              <li>Dallas-Fort Worth, TX</li>
+              <li>HTML · CSS · Flexbox · a11y basics</li>
+              <li>Interested in UX and front-end</li>
+              <li>Open to internships / collabs</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section id="skills" class="section section--alt">
+        <div class="container">
+          <h2>Skills &amp; Interests</h2>
+          <div class="cards">
+            <article class="card">
+              <h3>Semantic HTML</h3>
+              <p>Use proper landmarks, headings, and labels that make sense.</p>
+            </article>
+            <article class="card">
+              <h3>CSS &amp; Box Model</h3>
+              <p>Consistent spacing, borders, and a clear type scale.</p>
+            </article>
+            <article class="card">
+              <h3>Flexbox Layout</h3>
+              <p>Rows and columns that adapt cleanly without hacks.</p>
+            </article>
+            <article class="card">
+              <h3>Responsive Design</h3>
+              <p>Mobile-first adjustments with targeted breakpoints.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="container">
+          <h2>Projects</h2>
+          <div class="cards cards--projects">
+            <article class="card project">
+              <div class="project__thumb"></div>
+              <div class="project__body">
+                <h3>FlightPal (Concept)</h3>
+                <p>Trip cards, smart checklists, and focused alerts with a calm UI.</p>
+                <a class="btn btn--sm" href="#" aria-disabled="true">Coming soon</a>
+              </div>
+            </article>
+
+            <article class="card project">
+              <div class="project__thumb"></div>
+              <div class="project__body">
+                <h3>Personal Site</h3>
+                <p>Exploring type scale, spacing tokens, and color variables.</p>
+                <a class="btn btn--sm" href="#" aria-disabled="true">Live soon</a>
+              </div>
+            </article>
+
+            <article class="card project">
+              <div class="project__thumb"></div>
+              <div class="project__body">
+                <h3>Placeholder Project 3</h3>
+                <p>A simple placeholder to balance the layout and reserve space for future work.</p>
+                <a class="btn btn--sm" href="#" aria-disabled="true">Coming soon</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="footer">
+      <div class="container footer__row">
+        <p>
+          Contact: <a href="mailto:andres.solis@ttu.edu">andres.solis@ttu.edu</a>
+          <span class="muted">· Dallas-Fort Worth, TX</span>
+        </p>
+        <ul class="social">
+          <li><a href="https://github.com/CodingWithAndres" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://codingwithandres.github.io" target="_blank" rel="noopener noreferrer">Website</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
