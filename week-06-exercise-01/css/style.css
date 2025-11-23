@@ -1,15 +1,11 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
   font-family: "Times New Roman", serif;
   font-size: 16px;
   line-height: 2;
-  color: #111111;
-  background-color: #ffffff;
+  color: #032B43;
+  background-color: #FFFFFF;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -17,11 +13,7 @@ body {
   padding: 32px 0;
 }
 
-main {
-  max-width: 800px;
-  width: 100%;
-  padding: 0 16px;
-}
+main { max-width: 800px; width: 100%; padding: 0 16px; }
 
 h1 {
   font-size: 3.75rem;
@@ -31,7 +23,7 @@ h1 {
   text-align: center;
   margin-bottom: 24px;
   padding-bottom: 48px;
-  border-bottom: 1px solid rgba(0, 0, 0, 1);
+  border-bottom: 1px solid #032B43;
 }
 
 h2 {
@@ -40,123 +32,117 @@ h2 {
   margin-top: 32px;
   margin-bottom: 16px;
   padding-bottom: 8px;
-  border-bottom: 1px solid rgba(0, 0, 0, 1);
+  border-bottom: 1px solid #032B43;
 }
 
-p {
-  margin-bottom: 16px;
-}
+p { margin-bottom: 16px; }
+ul { margin-left: 32px; margin-bottom: 16px; }
+li { margin-bottom: 8px; }
 
-ul {
-  margin-left: 32px;
-  margin-bottom: 16px;
-}
-
-li {
-  margin-bottom: 8px;
-}
-
-a {
-  color: #0066CC;
-  text-decoration: underline;
-}
-
-a:hover {
-  color: #004499;
-}
+a { color: #3F88C5; text-decoration: underline; }
+a:hover { color: #136F63; }
 
 code {
   font-family: monospace;
-  background-color: #f5f5f5;
+  background-color: #FFBA08;
   padding: 2px 6px;
-  border: 1px solid rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(0,0,0,0.25);
 }
 
+/* ---------- GLOBAL NAV ENHANCEMENTS ---------- */
+nav ul { list-style: none; }
+nav a { text-decoration: none; }
+nav a:focus-visible { outline: 2px dashed #136F63; outline-offset: 2px; }
+nav a[aria-current="page"] {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-weight: bold;
+}
+
+/* ---------- PATTERN #1: SIMPLE VERTICAL ---------- */
 .nav-simple {
-  position: fixed;
-  left: 32px;
-  top: 32px;
-  width: 200px;
+  position: fixed; left: 32px; top: 32px; width: 200px;
 }
-
-.nav-simple ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-simple li {
-  margin-bottom: 8px;
-}
+.nav-simple ul { margin: 0; padding: 0; }
+.nav-simple li { margin-bottom: 8px; }
 
 .nav-simple a {
   display: block;
   padding: 8px 16px;
-  color: #0066CC;
-  text-decoration: none;
-  background-color: #fafafa;
-  border: 1px solid rgba(0, 0, 0, 0.25);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  color: #032B43;
+  background-color: #FFBA08;
+  border: 1px solid #032B43;
+  transition: background-color .3s ease, color .3s ease;
 }
-
 .nav-simple a:hover {
-  background-color: #0066CC;
-  color: #ffffff;
+  background-color: #D00000;
+  color: #FFFFFF;
 }
-
-.nav-simple+main {
-  margin-left: 232px;
+.nav-simple a[aria-current="page"] {
+  background-color: #136F63;
+  color: #FFFFFF;
+  border-color: #136F63;
 }
+.nav-simple + main { margin-left: 232px; }
 
+/* ---------- PATTERN #2: HORIZONTAL BAR ---------- */
 .nav-horizontal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: #333333;
+  position: fixed; top: 0; left: 0; right: 0;
+  background-color: #032B43;
   padding: 0 32px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   z-index: 1000;
 }
-
 .nav-horizontal ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 32px;
+  margin: 0; padding: 0; display: flex; gap: 32px;
 }
-
-.nav-horizontal li {
-  margin-bottom: 0;
-}
-
+.nav-horizontal li { margin-bottom: 0; }
 .nav-horizontal a {
-  display: block;
-  padding: 16px 0;
-  color: #ffffff;
-  text-decoration: none;
-  transition: color 0.3s ease;
+  display: block; padding: 16px 0;
+  color: #FFFFFF;
+  transition: color .3s ease, background-color .3s ease;
+}
+.nav-horizontal a:hover { color: #FFBA08; }
+.nav-horizontal a[aria-current="page"] {
+  color: #FFBA08;
+  border-bottom: 2px solid #FFBA08;
+}
+.nav-horizontal + main { margin-top: 80px; }
+
+/* ---------- PATTERN #3: CENTERED PILLS ---------- */
+.nav-centered { margin: 16px 0 24px; }
+.nav-centered ul {
+  margin: 0; padding: 0;
+  display: flex; justify-content: center;
+  gap: 12px; flex-wrap: wrap;
+}
+.nav-centered a {
+  display: block; padding: 8px 14px;
+  border: 1px solid #3F88C5;
+  border-radius: 999px;
+  background-color: #FFFFFF;
+  color: #3F88C5;
+  transition: background-color .25s ease, color .25s ease, transform .15s ease, box-shadow .15s ease;
+}
+.nav-centered a:hover {
+  background-color: #3F88C5;
+  color: #FFFFFF;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+}
+.nav-centered a[aria-current="page"] {
+  background-color: #136F63;
+  color: #FFFFFF;
+  border-color: #136F63;
 }
 
-.nav-horizontal a:hover {
-  color: #0066CC;
-}
-
-.nav-horizontal+main {
-  margin-top: 80px;
-}
-
+/* ---------- OPTIONAL CUSTOM HOOKS ---------- */
 .nav-custom {}
-
 .nav-custom ul {}
-
 .nav-custom li {}
-
 .nav-custom a {}
-
 .nav-custom a:hover {}
 
+/* ---------- MEDIA QUERIES ---------- */
 @media (width >=480px) {}
-
 @media (width >=1024px) {}
